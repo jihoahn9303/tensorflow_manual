@@ -20,7 +20,7 @@ for images, labels in train_ds:
     print(images.dtype)  # uint8
     
     print(labels.shape)
-    print(labels.dtype)
+    print(labels.dtype)  # int64
     break
 
 # %%
@@ -41,7 +41,7 @@ train_ds_iter = iter(train_ds)
 images, labels = next(train_ds_iter)
 print(images.dtype, tf.reduce_max(images))
 
-train_ds = train_ds.map(standardization)
+train_ds = train_ds.map(standardization)  # go standardization
 train_ds_iter = iter(train_ds)
 images, labels = next(train_ds_iter)
 print(images.dtype, tf.reduce_max(images))

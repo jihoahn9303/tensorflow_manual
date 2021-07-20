@@ -27,6 +27,7 @@ with tf.GradientTape() as tape:
 print(t1.numpy())
 print(t2.numpy())
 print(t3.numpy())
+print(t4.numpy())
 
 # 연산 기록에 대해, 편미분 실시
 gradients = tape.gradient(t4, [t1, t2, t3])  # dt4/dt1, dt4/dt2, dt4/dt3

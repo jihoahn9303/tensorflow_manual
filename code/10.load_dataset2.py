@@ -3,22 +3,23 @@
 Created on Thu Jun 17 18:12:18 2021
 
 @author: jiho Ahn
-@topic: load dataset with tensorflow(2)
+@topic: load dataset with tensorflow(2) 
+        (tensorflow_datasets)
 """
 
 import tensorflow_datasets as tfds
 
 # load dataset with additional information
 
-#dataset, ds_info = tfds.load(name='mnist', 
-#                             shuffle_files=True, 
-#                             with_info=True)
+dataset, ds_info = tfds.load(name='mnist', 
+                             shuffle_files=True, 
+                             with_info=True)
 
-'''
+
 print(ds_info)
 print(ds_info.features)
 print(ds_info.splits)
-'''
+
 
 # %%
 '''

@@ -73,14 +73,14 @@ print(t3.numpy(), '\n')
 # %% 
 
 tf.reduce_sum
-tf.reduce_prod
+tf.reduce_prod  # multiply
 tf.reduce_max
 tf.reduce_min
 tf.reduce_mean
 tf.reduce_std
 tf.reduce_variance
-tf.reduce_all
-tf.reduce_any
+tf.reduce_all  # return true or false
+tf.reduce_any  # return true or false
 
 # %%
 t1 = tf.random.normal(shape=(3, 4), mean=0, stddev=5)

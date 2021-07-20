@@ -29,13 +29,13 @@ t4 = PI * tf.ones(shape=(128, 128, 3))
 test_list = [[1, 2, 3], [4, 5, 6]]
 
 t1 = tf.Variable(test_list)
-#print(t1)
+print(t1)
 
-t2 = tf.ones_like(t1)
-#print(t2)
+t2 = tf.ones_like(t1)  # create tensor(has same shape with t1)
+print(t2)
 
-t3 = tf.zeros_like(t1)
-#print(t3)
+t3 = tf.zeros_like(t1)  # create tensor(has same shape with t1)
+print(t3)
 
 # %%
 #np.random.seed(0)

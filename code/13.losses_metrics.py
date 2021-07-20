@@ -43,7 +43,7 @@ print(loss.numpy())
 print(loss_manual)
 
 # %%
-# Binary Cross Entropy(3) : a bunch of one-hot matrix
+# Binary Cross Entropy(3) : a bunch of one-hot vectors(one-hot matrix)
 predictions = np.array([[0.3, 0.7], [0.4, 0.6], [0.1, 0.9]])
 labels = np.array([[0, 1], [1, 0], [1, 0]])
 
@@ -62,7 +62,7 @@ loss_manual = np.sum(loss_manual, axis=1).mean()
 for example) predictions = np.array[0.3, 0.7], labels = np.array[0, 1]
 -> 정답은 1이라는 뜻이다.
 -> 따라서 log cross entropy 공식에 따라, loss = -(1*log0.7 + 0*log0.3) 이다.
--> 이를 numpy 관점에서 표현하면, -1*[0, 1]*log[0.3, 0.7] = [-log0.7, -log0.3] 이다.
+-> 이를 numpy 관점에서 표현하면, -1*[0, 1]*log[0.3, 0.7] = [-0, -log0.7] 이다.
 -> 따라서 loss는 -1*np.sum(labels*np.log(predictions), axis=1)로 간단하게 표현 가능하다.
 '''
 

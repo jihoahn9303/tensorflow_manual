@@ -17,6 +17,7 @@ from tensorflow.keras.metrics import Mean, SparseCategoricalAccuracy
 
 n_train, n_validation, n_test = 1000, 300, 300
 
+# create train set
 train_x = np.random.normal(0, 1, size=(n_train, 1)).astype(np.int32)
 train_x_noise = train_x + np.random.normal(0, 1, size=(n_train, 1)).astype(np.int32)
 train_y = (train_x_noise > 0).astype(np.int32)

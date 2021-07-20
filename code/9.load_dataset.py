@@ -5,6 +5,7 @@ Created on Thu Jun 17 17:30:01 2021
 @author: jiho Ahn
 @topic: load dataset with tensorflow(1)
 """
+# tf.data.Dataset.from_tensor_slices
 import tensorflow as tf
 import numpy as np
 
@@ -19,6 +20,7 @@ for x, y in train_ds:
     print(x.shape, y.shape, '\n')
 
 # %%
+# tensorflow.keras.datasets
 from tensorflow.keras.datasets import mnist
 import matplotlib.pyplot as plt
 
@@ -37,7 +39,7 @@ train_ds = train_ds.shuffle(100).batch(9)
 test_ds = tf.data.Dataset.from_tensor_slices((test_images, test_labels))
 test_ds = test_ds.batch(32)
 
-'''
+
 train_ds_iter = iter(train_ds)
 images, labels = next(train_ds_iter)
 
@@ -49,6 +51,6 @@ for ax_idx, ax in enumerate(axes.flat):
     
     ax.imshow(image.numpy(), 'gray')
     ax.set_title(label.numpy(), fontsize=20)
-'''
+
     
 

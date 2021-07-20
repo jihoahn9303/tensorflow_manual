@@ -53,8 +53,8 @@ for epoch in range(EPOCHS):
     template = 'Train Loss: {:.4f}\t Train Accuracy: {:.2f}%\n'
     print(template.format(train_loss.result(), train_acc.result()*100))
     
-#    train_loss.reset_states()
-#    train_acc.reset_states()
+    train_loss.reset_states()
+    train_acc.reset_states()
     
 # %%
 # metrics object 객체의 reset_states()를 적용하지 않을 경우 치명적인 문제점
