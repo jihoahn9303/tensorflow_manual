@@ -31,6 +31,7 @@ print(colored("model.layers ", 'cyan'), '\n', model.layers, '\n')
 print(colored("len(model.layers) ", 'cyan'), '\n', len(model.layers), '\n')
 
 # %%
+import json
 
 final_layer = model.layers[-1]
 final_layer_config = final_layer.get_config()
